@@ -1,4 +1,3 @@
-// Validation
 const Joi = require('@hapi/joi');
 
 const signupValidation = data => {
