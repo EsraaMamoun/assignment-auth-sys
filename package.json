@@ -1,0 +1,20 @@
+{
+  "name": "assignment-auth-sys",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EsraaMamoun/assignment-auth-sys.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EsraaMamoun/assignment-auth-sys/issues"
+  },
+  "homepage": "https://github.com/EsraaMamoun/assignment-auth-sys#readme"
+}
