@@ -11,7 +11,7 @@ const signupValidation = data => {
             .required()
             .email(),
         password: Joi.string()
-            .min(7)
+            .min(6)
             .required()
     });
     return schema.validate(data);
@@ -24,7 +24,7 @@ const signinValidation = data => {
             .required()
             .email(),
         password: Joi.string()
-            .min(7)
+            .min(6)
             .required()
     });
     return schema.validate(data);

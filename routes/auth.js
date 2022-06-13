@@ -22,7 +22,8 @@ router.post('/signup', async (req, res) => {
     });
     try {
         const savedUser = await user.save();
-        res.send(savedUser);
+        const token = jwt.sign({_id: savedUser._id}, process.env.TOKEN_SECRET);
+        res.header('auth-token', token).send({token, user_data: user});
     } catch (error) {
         res.status(400).send(error);
     }
@@ -39,7 +40,7 @@ router.post('/signin', async (req, res) => {
     if(!validPassword) return res.status(400).send('Email or password is wrong!');
 
     const token = jwt.sign({_id: user._id}, process.env.TOKEN_SECRET);
-    res.header('auth-token', token).send(token);
+    res.header('auth-token', token).send({token, user_data: user});
 });
 
 module.exports = router;
